@@ -17,9 +17,11 @@
     "no-process-exit": "off",
     "no-param-reassign": "off",
     "no-return-await": "off",
+    "no-use-before-define": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "prefer-arrow-callback": "off",
+    "arrow-body-style": "off",
     "no-else-return": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "no-unused-vars": [

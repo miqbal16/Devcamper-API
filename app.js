@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 const fileupload = require('express-fileupload');
 const errorHandler = require('./middlewares/error');
 
@@ -20,6 +21,7 @@ app.use(fileupload());
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
+app.use(cookieParser());
 
 // ROUTER
 app.use('/api/v1/bootcamps', bootcampRouter);
