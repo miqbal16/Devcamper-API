@@ -6,6 +6,7 @@ const errorHandler = require('./middlewares/error');
 // IMPORT ROUTER
 const bootcampRouter = require('./routes/bootcampRoute');
 const courseRouter = require('./routes/courseRoute');
+const authRouter = require('./routes/authRoute');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(`${__dirname}/public`));
 // ROUTER
 app.use('/api/v1/bootcamps', bootcampRouter);
 app.use('/api/v1/courses', courseRouter);
+app.use('/api/v1/auth', authRouter);
 
 // ERROR HANDLER MIDDLEWARE
 app.use(errorHandler);
